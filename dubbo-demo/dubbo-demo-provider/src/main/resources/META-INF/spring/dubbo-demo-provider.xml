@@ -36,7 +36,7 @@
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoService"/>
 
-    <!-- 开启monitor-->
+    <!-- 服务端需要配置监控的配置文件，不配置则直连，配置了从注册中心去找monitor-->
     <!--<dubbo:monitor protocol="registry"/>-->
 
 </beans>
