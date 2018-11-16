@@ -583,13 +583,13 @@ public class ExtensionLoader<T> {
         }
 
         Map<String, Class<?>> extensionClasses = new HashMap<String, Class<?>>();
-        loadFile(extensionClasses, DUBBO_INTERNAL_DIRECTORY);
+        loadFile(extensionClasses, DUBBO_INTERNAL_DIRECTORY);  // "META-INF/dubbo/internal/"
         loadFile(extensionClasses, DUBBO_DIRECTORY);
         loadFile(extensionClasses, SERVICES_DIRECTORY);
         return extensionClasses;
     }
 
-    private void loadFile(Map<String, Class<?>> extensionClasses, String dir) {
+    private void loadFile(Map<String, Class<?>> extensionClasses, String dir) {   //"META-INF/dubbo/internal/"
         String fileName = dir + type.getName();
         try {
             Enumeration<java.net.URL> urls;
