@@ -178,11 +178,11 @@
                 <artifactId>maven-jetty-plugin</artifactId>
                 <version>${jetty_version}</version>
                 <configuration>
-                    <contextPath>/</contextPath>
+                    <contextPath>/dubbo_admin_war_exploded</contextPath>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
                     <connectors>
                         <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-                            <port>8080</port>
+                            <port>1000</port>
                             <maxIdleTime>60000</maxIdleTime>
                         </connector>
                     </connectors>
